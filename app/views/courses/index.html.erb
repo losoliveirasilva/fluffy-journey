@@ -1,0 +1,16 @@
+<h1><%= @courses.first.curriculum.name %></h1>
+<% @courses.pluck(:period).uniq.sort.each do |period| %>
+  <div>
+    <h2><%= "Fase #{period}"%></h2>
+  </div>
+  <% @courses.where(period: period).each do |course| %>
+    <div>
+      <%= course.name %>
+    </div>
+    <% course.prerequisites.each do |prerequisite| %>
+      <div style="margin-left: 30px;">
+        <%= prerequisite.name %>
+      </div>
+    <% end %>
+  <% end %>
+<% end %>

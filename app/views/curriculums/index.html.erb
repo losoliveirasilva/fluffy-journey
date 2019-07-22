@@ -1,0 +1,7 @@
+<% @curriculums.each do |c| %>
+  <div>
+    <%= link_to courses_path(curriculum: c.id) do %>
+      <%= c.name %>
+    <% end %>
+  </div>
+<% end %>

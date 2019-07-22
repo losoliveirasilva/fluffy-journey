@@ -22,11 +22,6 @@ course = sistemas.courses.create(name: 'Introdução à Informática',
                         hour_load: 72,
                         period: period)
 
-course = sistemas.courses.create(name: 'Introdução à Informática',
-                        code: 'INE5602',
-                        hour_load: 72,
-                        period: period)
-
 course = sistemas.courses.create(name: 'Introdução à Programação Orientada a Objetos',
                         code: 'INE5603',
                         hour_load: 108,
