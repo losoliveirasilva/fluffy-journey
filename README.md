@@ -45,4 +45,4 @@ Run the server:
 $ rails server
 ```
 
-Open the `localhost:3000`
+Open the server on `localhost:3000`
