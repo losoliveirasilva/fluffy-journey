@@ -119,3 +119,141 @@ course = sistemas.courses.create(name: 'Gestão Estratégica de Tecnologias, Inf
                         code: 'INE5659',
                         hour_load: 72,
                         period: period)
+
+# Fith period
+period += 1
+course = sistemas.courses.create(name: 'Engenharia de Software',
+                        code: 'INE5614',
+                        hour_load: 72,
+                        period: period)
+course.prerequisites = [Course.find_by(code: 'INE5608')]
+
+course = sistemas.courses.create(name: 'Redes de Computadores',
+                        code: 'INE5615',
+                        hour_load: 72,
+                        period: period)
+course.prerequisites = [Course.find_by(code: 'INE5611')]
+
+course = sistemas.courses.create(name: 'Bancos de Dados II',
+                        code: 'INE5616',
+                        hour_load: 72,
+                        period: period)
+course.prerequisites = [Course.find_by(code: 'INE5613')]
+
+course = sistemas.courses.create(name: 'Programação Paralela e Distribuída',
+                        code: 'INE5645',
+                        hour_load: 72,
+                        period: period)
+course.prerequisites = [Course.find_by(code: 'INE5611')]
+
+course = sistemas.courses.create(name: 'Modelagem e Automação de Processos de Negócios',
+                        code: 'INE5681',
+                        hour_load: 72,
+                        period: period)
+course.prerequisites = [Course.find_by(code: 'INE5608')]
+
+# Sixth period
+period += 1
+course = sistemas.courses.create(name: 'Bancos de Dados III',
+                        code: 'INE5600',
+                        hour_load: 36,
+                        period: period)
+course.prerequisites = [Course.find_by(code: 'INE5616')]
+
+course = sistemas.courses.create(name: 'Administração e Gerência de Redes de Computadores',
+                        code: 'INE5619',
+                        hour_load: 72,
+                        period: period)
+course.prerequisites = [Course.find_by(code: 'INE5615')]
+
+course = sistemas.courses.create(name: 'Informática e Sociedade',
+                        code: 'INE5621',
+                        hour_load: 36,
+                        period: period)
+course.prerequisites = [Course.find_by(code: 'INE5621')]
+
+course = sistemas.courses.create(name: 'Introdução a Compiladores',
+                        code: 'INE5622',
+                        hour_load: 72,
+                        period: period)
+course.prerequisites = [Course.find_by(code: 'INE5609')]
+
+course = sistemas.courses.create(name: 'Engenharia de Usabilidade',
+                        code: 'INE5624',
+                        hour_load: 72,
+                        period: period)
+course.prerequisites = [Course.find_by(code: 'INE5612'),
+                        Course.find_by(code: 'INE5614')]
+
+course = sistemas.courses.create(name: 'Computação Distribuída',
+                        code: 'INE5625',
+                        hour_load: 72,
+                        period: period)
+course.prerequisites = [Course.find_by(code: 'INE5615'),
+                        Course.find_by(code: 'INE5645')]
+
+# Seventh period
+period += 1
+course = sistemas.courses.create(name: 'Gerência de Projetos',
+                        code: 'INE5617',
+                        hour_load: 72,
+                        period: period)
+course.prerequisites = [Course.find_by(code: 'INE5614')]
+
+course = sistemas.courses.create(name: 'Sistemas Inteligentes',
+                        code: 'INE5633',
+                        hour_load: 72,
+                        period: period)
+course.prerequisites = [Course.find_by(code: 'INE5612')]
+
+course = sistemas.courses.create(name: 'Introdução a Projetos',
+                        code: 'INE5638',
+                        hour_load: 18,
+                        period: period)
+course.prerequisites = [Course.find_by(code: 'INE5614')]
+
+course = sistemas.courses.create(name: 'Data Warehouse',
+                        code: 'INE5643',
+                        hour_load: 72,
+                        period: period)
+course.prerequisites = [Course.find_by(code: 'INE5616')]
+
+course = sistemas.courses.create(name: 'Segurança da Informação e de Redes',
+                        code: 'INE5680',
+                        hour_load: 72,
+                        period: period)
+course.prerequisites = [Course.find_by(code: 'INE5615'),
+                        Course.find_by(code: 'INE5645')]
+
+# Eighth period
+period += 1
+course = sistemas.courses.create(name: 'Plano de Negócios em Informática',
+                        code: 'EGC5010',
+                        hour_load: 36,
+                        period: period)
+course.prerequisites = [Course.find_by(code: 'CAD5103'),
+                        Course.find_by(code: 'CAD5240'),
+                        Course.find_by(code: 'EGC5009')]
+
+course = sistemas.courses.create(name: 'Projetos I',
+                        code: 'INE5631',
+                        hour_load: 144,
+                        period: period)
+course.prerequisites = [Course.find_by(code: 'INE5617'),
+                        Course.find_by(code: 'INE5638')]
+
+course = sistemas.courses.create(name: 'Data Mining',
+                        code: 'INE5644',
+                        hour_load: 72,
+                        period: period)
+course.prerequisites = [Course.find_by(code: 'INE5606'),
+                        Course.find_by(code: 'INE5633'),
+                        Course.find_by(code: 'INE5643')]
+
+# Ninth period
+period += 1
+course = sistemas.courses.create(name: 'Projetos II',
+                        code: 'INE5660',
+                        hour_load: 234,
+                        period: period)
+course.prerequisites = [Course.find_by(code: 'INE5631')]
