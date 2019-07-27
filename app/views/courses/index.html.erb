@@ -5,11 +5,45 @@
   </div>
   <% @courses.where(period: period).each do |course| %>
     <div>
-      <%= course.name %>
+      <% if @user.courses.include? course %>
+        <span style="color: #0c0">
+          <i class="fas fa-check"></i>
+          <strong><%= "#{course.code} - #{course.name}" %></strong>
+        </span>
+      <% else %>
+        <% if (course.prerequisites.pluck(:id) - @user.courses.pluck(:id)).empty? %>
+          <span style="color: #00c">
+            <i class="fas fa-lock-open"></i>
+            <%= "#{course.code} - #{course.name}" %>
+          </span>
+        <% else %>
+          <span style="color: #c00">
+            <i class="fas fa-lock"></i>
+            <%= "#{course.code} - #{course.name}" %>
+          </span>
+        <% end %>
+      <% end %>
     </div>
     <% course.prerequisites.each do |prerequisite| %>
       <div style="margin-left: 30px;">
-        <%= prerequisite.name %>
+        <% if @user.courses.include? prerequisite %>
+          <span style="color: #0c0">
+            <i class="fas fa-check"></i>
+            <strong><%= "#{prerequisite.code} - #{prerequisite.name}" %></strong>
+          </span>
+        <% else %>
+          <% if (prerequisite.prerequisites.pluck(:id) - @user.courses.pluck(:id)).empty? %>
+            <span style="color: #00c">
+              <i class="fas fa-lock-open"></i>
+              <%= "#{prerequisite.code} - #{prerequisite.name}" %>
+            </span>
+          <% else %>
+            <span style="color: #c00">
+              <i class="fas fa-lock"></i>
+              <%= "#{prerequisite.code} - #{prerequisite.name}" %>
+            </span>
+          <% end %>
+        <% end %>
       </div>
     <% end %>
   <% end %>
